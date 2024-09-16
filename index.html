@@ -23,7 +23,7 @@
         </section>
         <!-- playground start  -->
         <section id="play-ground" class="hidden">
-            <div class="flex flex-col items-center gap-14 pt-8">
+            <div class="flex flex-col items-center gap-8 pt-8">
                 <!-- screen  -->
                 <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313cc] bg-[#FFFFFFB3]">
                     <div class="flex justify-center">
@@ -69,33 +69,38 @@
                         <kbd id="/" class="kbd">/</kbd>
                       </div>
                  </div>
+                 <div>
+                    <p class="m-0 p-0">Please Enter 'Escape' to stop the game.</p>
+                </div>
                 <!-- keyboard end  -->
                 <!-- life score  -->
                  <div class=" flex justify-between w-2/4">
                     <button class="btn rounded-full bg-pink-500 text-white">
                         Life
                         <i class="fa-solid fa-heart-circle-bolt fa-fade"></i>
-                        <span>1</span>
+                        <span id="current-life">5</span>
                       </button>
                     <button class="btn rounded-full bg-pink-500 text-white">
                         Score
                         <i class="fa-solid fa-dollar-sign fa-beat-fade"></i>
-                        <span>1</span>
+                        <span id="current-score">0</span>
                     </button>
                  </div>
             </div>
         </section>
         <!-- playground end  -->
          <!-- final score start  -->
-        <section class="score flex justify-center min-h-screen items-center hidden">
+        <section id="total-score" onclick="play()" class="score flex justify-center min-h-screen items-center hidden">
             <div class=" text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+                <h3>Game Over!</h3>
                 <h1 class="text-8xl">
                     <span class="font-bold">Score:</span>
-                    <span>14</span>
+                    <span id="last-score"  >0</span>
                 </h1>
                 <button class="btn">Play Again</button>
                 <p>Practice will make you pro</p>
             </div>
+            
         </section>
     </main>
     <script src="styles/alpha-gamle/utility.js"></script>
